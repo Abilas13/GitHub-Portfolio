@@ -25,21 +25,8 @@ I'm an **undergraduate Data Science student** passionate about **Python, Machine
 
 ### ChatOn
 Interactive chatbot project built with Python and modern data science tools.  
-![ChatOn Screenshot](images/chaton.png)  
 **Tech:** Python, Pandas, scikit-learn  
-[Live Demo](#) | [Code](#)
-
-### Sales Data Analysis
-Analyzed and visualized sales data to provide actionable business insights.  
-![Sales Data Screenshot](images/sales.png)  
-**Tech:** Python, Pandas, Matplotlib, Seaborn  
-[Live Demo](#) | [Code](#)
-
-### ML Prediction Model
-Built a predictive model to forecast outcomes based on historical data.  
-![ML Model Screenshot](images/ml_model.png)  
-**Tech:** Python, scikit-learn, NumPy  
-[Live Demo](#) | [Code](#)
+[Live Demo](#) | [Code](#
 
 ---
 
@@ -53,8 +40,7 @@ Built a predictive model to forecast outcomes based on historical data.
 
 ## 📫 Contact Me
 
-- **Email:** y.abilash13@gmail.com  
-- **LinkedIn:** [Abilash](https://www.linkedin.com/in/yourprofile)  
+- **Email:** y.abilash13@gmail.com   
 - **GitHub:** [Abilash13](https://github.com/Abilash13)  
 - **Portfolio:** [Your Website](https://abilas13.github.io/GitHub-Portfolio/)
 
