@@ -6,7 +6,7 @@ I'm an **undergraduate Data Science student** passionate about **Python, Machine
 
 ## 👨‍💻 About Me
 
-- 🎓 Currently pursuing a degree in Data Science  
+- 🎓 Currently pursuing a degree in Data Science
 - 🐍 Skilled in Python and its data ecosystem  
 - 💡 Interested in Machine Learning, AI, and Data Visualization  
 - ⚡ Always eager to learn and collaborate on exciting projects  
