@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abilash - Data Science Portfolio</title>
+    <title>Abilas13 - Data Science Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -13,402 +13,300 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0f0f0f;
+            color: #ffffff;
             line-height: 1.6;
-            color: #2d3748;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
             overflow-x: hidden;
         }
 
-        /* Background Pattern */
-        body::before {
-            content: '';
+        /* Navigation */
+        .navbar {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
-            z-index: -1;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Header Title */
-        .header-title {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-top: 40px;
-        }
-
-        .header-title h1 {
-            font-size: 4rem;
-            font-weight: 700;
-            color: rgba(255, 255, 255, 0.9);
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            letter-spacing: -1px;
-        }
-
-        /* Main Card */
-        .main-card {
-            background: rgba(255, 255, 255, 0.95);
+            right: 0;
+            background: rgba(15, 15, 15, 0.95);
             backdrop-filter: blur(20px);
-            border-radius: 25px;
-            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            overflow: hidden;
-            position: relative;
+            padding: 20px 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        /* Navigation */
-        .navigation {
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 25px 40px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo-icon {
-            width: 45px;
-            height: 45px;
-            background: linear-gradient(135deg, #8B5CF6, #A855F7);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        .logo-text {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #2d3748;
+            padding: 0 60px;
         }
 
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 35px;
+            gap: 40px;
             align-items: center;
         }
 
         .nav-menu a {
+            color: #999999;
             text-decoration: none;
-            color: #64748b;
-            font-weight: 500;
-            font-size: 0.95rem;
+            font-weight: 400;
+            font-size: 16px;
             transition: all 0.3s ease;
             position: relative;
         }
 
         .nav-menu a:hover {
-            color: #8B5CF6;
+            color: #ffffff;
         }
 
-        .nav-menu a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background: #8B5CF6;
-            transition: width 0.3s ease;
+        .nav-menu a.active {
+            color: #ffffff;
         }
 
-        .nav-menu a:hover::after {
-            width: 100%;
+        .social-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
         }
 
-        .contact-btn {
-            background: linear-gradient(135deg, #8B5CF6, #A855F7);
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 0.9rem;
+        .social-links a {
+            color: #999999;
+            font-size: 20px;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
         }
 
-        .contact-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+        .social-links a:hover {
+            color: #22c55e;
         }
 
         /* Hero Section */
-        .hero-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0px;
-            padding: 0px;
-            align-items: stretch;
-            min-height: 500px;
-            position: relative;
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 60px 60px;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         .hero-content {
-            position: relative;
-            padding: 60px 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background: rgba(248, 250, 252, 0.3);
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 80px;
+            align-items: center;
+            width: 100%;
         }
 
-        .badge {
-            position: absolute;
-            top: -20px;
-            left: 0px;
-            background: linear-gradient(135deg, #8B5CF6, #A855F7);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 15px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
-            z-index: 10;
+        .hero-text {
+            max-width: 600px;
         }
 
         .hero-title {
-            font-size: 3.2rem;
-            font-weight: 800;
-            color: #2d3748;
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 30px;
             line-height: 1.1;
-            margin-bottom: 25px;
-            letter-spacing: -1px;
+            letter-spacing: -2px;
         }
 
-        .hero-title .highlight {
-            color: #2d3748;
-        }
-
-        .hero-description {
-            font-size: 1.1rem;
-            color: #64748b;
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #999999;
+            margin-bottom: 40px;
             line-height: 1.7;
-            margin-bottom: 35px;
-            max-width: 420px;
+            max-width: 500px;
         }
 
         .cta-button {
-            background: linear-gradient(135deg, #8B5CF6, #A855F7);
-            color: white;
-            padding: 16px 32px;
+            background: #22c55e;
+            color: #ffffff;
+            padding: 18px 35px;
             border: none;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 0.95rem;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
             text-decoration: none;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
             transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.3);
-            width: fit-content;
+            cursor: pointer;
         }
 
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+            background: #16a34a;
+            transform: translateY(-2px);
         }
 
-        /* Hero Image */
-        .hero-image {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            background: rgba(255, 255, 255, 0.2);
-            overflow: hidden;
-        }
-
-        .profile-container {
-            position: relative;
-            height: 100%;
-            display: flex;
-            align-items: flex-end;
-        }
-
-        .profile-image {
-            width: 380px;
-            height: 460px;
-            object-fit: cover;
-            object-position: center top;
-            border-radius: 25px 25px 0 0;
-            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
+        .cta-button::after {
+            content: '→';
+            font-size: 18px;
             transition: transform 0.3s ease;
         }
 
-        .profile-image:hover {
-            transform: scale(1.02);
+        .cta-button:hover::after {
+            transform: translateX(5px);
         }
 
-        /* Remove floating stats from hero */
-        .floating-stat {
-            display: none;
+        .hero-image {
+            position: relative;
         }
 
-        /* Stats Bar */
-        .stats-bar {
-            display: flex;
-            justify-content: space-around;
-            padding: 40px;
-            border-top: 1px solid rgba(0, 0, 0, 0.05);
-            background: rgba(248, 250, 252, 0.5);
+        .profile-circle {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            padding: 8px;
+            position: relative;
         }
 
-        .stat-item {
-            text-align: center;
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid #0f0f0f;
         }
 
-        .stat-item .number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #1a202c;
-            display: block;
-            line-height: 1;
+        /* Companies Section */
+        .companies {
+            padding: 80px 60px;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
-        .stat-item .label {
-            font-size: 0.9rem;
-            color: #64748b;
+        .companies-title {
+            color: #999999;
+            font-size: 18px;
             font-weight: 500;
-            margin-top: 5px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .companies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            align-items: center;
+        }
+
+        .company-logo {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .company-logo:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(34, 197, 94, 0.3);
+        }
+
+        .company-logo span {
+            color: #666666;
+            font-size: 16px;
+            font-weight: 600;
         }
 
         /* Skills Section */
         .skills-section {
-            padding: 60px 40px;
-            background: rgba(248, 250, 252, 0.3);
-            border-top: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .skills-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .skills-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #1a202c;
-            margin-bottom: 15px;
-        }
-
-        .skills-subtitle {
-            font-size: 1.1rem;
-            color: #64748b;
-            max-width: 600px;
+            padding: 120px 60px;
+            max-width: 1400px;
             margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #999999;
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
+            margin-bottom: 80px;
         }
 
         .skill-card {
-            background: white;
-            border-radius: 20px;
-            padding: 35px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 40px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border: 1px solid rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .skill-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.05), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .skill-card:hover::before {
-            left: 100%;
         }
 
         .skill-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(139, 92, 246, 0.15);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(34, 197, 94, 0.3);
+            transform: translateY(-5px);
         }
 
         .skill-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #8B5CF6, #A855F7);
-            border-radius: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 25px;
-            font-size: 1.8rem;
-            color: white;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
         }
 
         .skill-card h3 {
-            font-size: 1.3rem;
-            color: #1a202c;
+            font-size: 1.5rem;
+            color: #ffffff;
             margin-bottom: 15px;
-            font-weight: 600;
         }
 
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 10px;
             justify-content: center;
+            margin-top: 20px;
         }
 
         .skill-tag {
-            background: linear-gradient(135deg, #8B5CF6, #A855F7);
-            color: white;
-            padding: 6px 14px;
-            border-radius: 15px;
-            font-size: 0.8rem;
+            background: rgba(34, 197, 94, 0.1);
+            color: #22c55e;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
             font-weight: 500;
         }
 
         /* Project Section */
         .project-section {
-            padding: 60px 40px;
+            padding: 120px 60px;
+            max-width: 1400px;
+            margin: 0 auto;
             text-align: center;
         }
 
         .project-card {
-            background: linear-gradient(135deg, #8B5CF6, #A855F7);
-            border-radius: 25px;
-            padding: 50px;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            border-radius: 20px;
+            padding: 80px 60px;
             color: white;
             position: relative;
             overflow: hidden;
@@ -419,17 +317,11 @@
         .project-card::before {
             content: '';
             position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            animation: rotate 20s linear infinite;
-        }
-
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="3" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
         }
 
         .project-content {
@@ -439,217 +331,293 @@
 
         .project-title {
             font-size: 3rem;
-            font-weight: 800;
+            font-weight: 700;
             margin-bottom: 20px;
         }
 
         .project-description {
-            font-size: 1.2rem;
-            opacity: 0.95;
-            line-height: 1.7;
-            margin-bottom: 30px;
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            line-height: 1.6;
         }
 
         .project-btn {
-            background: white;
-            color: #8B5CF6;
-            padding: 15px 35px;
-            border: none;
-            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 16px 32px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
             font-weight: 600;
             text-decoration: none;
             display: inline-block;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .project-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 120px 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 60px 40px;
+            max-width: 500px;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(34, 197, 94, 0.3);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #22c55e;
+        }
+
+        .contact-card h3 {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .contact-link {
+            color: #22c55e;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: #16a34a;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 40px 60px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #666666;
         }
 
         /* Responsive Design */
-        @media (max-width: 1024px) {
-            .hero-section {
+        @media (max-width: 1200px) {
+            .hero-content {
                 grid-template-columns: 1fr;
+                gap: 60px;
                 text-align: center;
-                gap: 40px;
             }
 
-            .profile-image {
+            .profile-circle {
                 width: 300px;
-                height: 350px;
-            }
-
-            .floating-stat {
-                display: none;
+                height: 300px;
             }
         }
 
         @media (max-width: 768px) {
-            .header-title h1 {
-                font-size: 2.5rem;
-            }
-
-            .navigation {
-                flex-direction: column;
-                gap: 20px;
-                padding: 20px;
+            .nav-container {
+                padding: 0 30px;
             }
 
             .nav-menu {
                 gap: 20px;
-                flex-wrap: wrap;
-                justify-content: center;
             }
 
-            .hero-section {
-                padding: 40px 20px;
+            .hero {
+                padding: 100px 30px 60px;
+            }
+
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .companies, .skills-section, .project-section, .contact-section {
+                padding: 80px 30px;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .profile-circle {
+                width: 250px;
+                height: 250px;
+            }
+
+            .companies-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 20px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-menu {
+                display: none;
             }
 
             .hero-title {
                 font-size: 2.5rem;
             }
 
-            .stats-bar {
-                flex-direction: column;
-                gap: 30px;
+            .project-card {
+                padding: 60px 40px;
             }
 
-            .skills-section,
-            .project-section {
-                padding: 40px 20px;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .profile-image {
-                width: 250px;
-                height: 300px;
+            .project-title {
+                font-size: 2.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header Title -->
-        <div class="header-title">
-            <h1>Data Science Portfolio</h1>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Get In Touch</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="https://linkedin.com" target="_blank">💼</a>
+                <a href="https://github.com/Abilas13" target="_blank">🔗</a>
+                <a href="mailto:y.abilash13@gmail.com">📧</a>
+            </div>
         </div>
+    </nav>
 
-        <!-- Main Card -->
-        <div class="main-card">
-            <!-- Navigation -->
-            <nav class="navigation">
-                <div class="logo">
-                    <div class="logo-icon">A</div>
-                    <div class="logo-text">Abilash</div>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="mailto:y.abilash13@gmail.com" class="contact-btn">Contact</a></li>
-                </ul>
-            </nav>
-
-            <!-- Hero Section -->
-            <section class="hero-section" id="home">
-                <div class="hero-content">
-                    <div class="badge">Data Scientist</div>
-                    <h1 class="hero-title">
-                        Hello, I'm<br>
-                        <span class="highlight">Abilash</span>
-                    </h1>
-                    <p class="hero-description">
-                        I'm a passionate Data Science student and Python developer based in Sri Lanka. 
-                        I strive to build intelligent machine learning solutions through 
-                        carefully crafted code and data-driven insights.
-                    </p>
-                    <a href="mailto:y.abilash13@gmail.com" class="cta-button">Say Hello!</a>
-                </div>
-
-                <div class="hero-image">
-                    <div class="profile-container">
-                        <img src="https://github.com/Abilas13.png" alt="Abilash" class="profile-image">
-                    </div>
-                </div>
-            </section>
-
-            <!-- Stats Bar -->
-            <div class="stats-bar">
-                <div class="stat-item">
-                    <span class="number">2 Y.</span>
-                    <span class="label">Experience</span>
-                </div>
-                <div class="stat-item">
-                    <span class="number">10+</span>
-                    <span class="label">Projects</span>
-                </div>
-                <div class="stat-item">
-                    <span class="number">5+</span>
-                    <span class="label">Technologies</span>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Hi, I'm Abilas13 👋</h1>
+                <p class="hero-subtitle">
+                    I'm an undergraduate Data Science student with a passion for building data-driven solutions using Python. 
+                    I love exploring new technologies and applying what I learn to real-world projects, with interests in machine learning, AI, and data visualization.
+                </p>
+                <a href="#contact" class="cta-button">Let's get started</a>
+            </div>
+            <div class="hero-image">
+                <div class="profile-circle">
+                    <img src="https://github.com/Abilas13.png" alt="Abilas13" class="profile-img">
                 </div>
             </div>
-
-            <!-- Skills Section -->
-            <section class="skills-section" id="skills">
-                <div class="skills-header">
-                    <h2 class="skills-title">Skills & Technologies</h2>
-                    <p class="skills-subtitle">
-                        Comprehensive toolkit for data science and machine learning projects
-                    </p>
-                </div>
-                
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-icon">💻</div>
-                        <h3>Programming</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">SQL</span>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-card">
-                        <div class="skill-icon">📊</div>
-                        <h3>Data Analysis</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Pandas</span>
-                            <span class="skill-tag">NumPy</span>
-                            <span class="skill-tag">Matplotlib</span>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-card">
-                        <div class="skill-icon">🤖</div>
-                        <h3>Machine Learning</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">scikit-learn</span>
-                            <span class="skill-tag">Data Modeling</span>
-                            <span class="skill-tag">Analytics</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Project Section -->
-            <section class="project-section" id="projects">
-                <div class="project-card">
-                    <div class="project-content">
-                        <h2 class="project-title">🚀 ChatOn</h2>
-                        <p class="project-description">
-                            An intelligent chatbot application leveraging natural language processing and machine learning algorithms to deliver seamless conversational experiences. Built with Python and modern data science frameworks.
-                        </p>
-                        <a href="https://github.com/Abilas13" target="_blank" class="project-btn">View on GitHub</a>
-                    </div>
-                </div>
-            </section>
         </div>
-    </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="companies">
+        <h2 class="companies-title">Technologies I work with</h2>
+        <div class="companies-grid">
+            <div class="company-logo">
+                <span>Python</span>
+            </div>
+            <div class="company-logo">
+                <span>Pandas</span>
+            </div>
+            <div class="company-logo">
+                <span>NumPy</span>
+            </div>
+            <div class="company-logo">
+                <span>Matplotlib</span>
+            </div>
+            <div class="company-logo">
+                <span>scikit-learn</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <p class="section-subtitle">
+            Comprehensive toolkit for data science and machine learning projects
+        </p>
+        
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon">💻</div>
+                <h3>Programming</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">SQL</span>
+                </div>
+            </div>
+            
+            <div class="skill-card">
+                <div class="skill-icon">📊</div>
+                <h3>Data Analysis</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">NumPy</span>
+                    <span class="skill-tag">Matplotlib</span>
+                    <span class="skill-tag">Data Visualization</span>
+                </div>
+            </div>
+            
+            <div class="skill-card">
+                <div class="skill-icon">🤖</div>
+                <h3>Machine Learning</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">scikit-learn</span>
+                    <span class="skill-tag">Data Modeling</span>
+                    <span class="skill-tag">Analytics</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Section -->
+    <section class="project-section" id="projects">
+        <h2 class="section-title">Featured Project</h2>
+        <div class="project-card">
+            <div class="project-content">
+                <h2 class="project-title">🚀 ChatOn</h2>
+                <p class="project-description">
+                    A smart and interactive chatbot project designed to make conversations smoother and more engaging. Built with Python and modern data science tools.
+                </p>
+                <a href="https://github.com/Abilas13" target="_blank" class="project-btn">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <h2 class="section-title">📫 Get In Touch</h2>
+        <p class="section-subtitle">
+            Always eager to learn and collaborate on exciting projects
+        </p>
+        <div class="contact-card">
+            <div class="contact-icon">✉️</div>
+            <h3>Email</h3>
+            <a href="mailto:y.abilash13@gmail.com" class="contact-link">y.abilash13@gmail.com</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Abilas13. Built with passion for data science.</p>
+    </footer>
 </body>
 </html>
