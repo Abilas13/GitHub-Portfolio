@@ -368,31 +368,39 @@
             text-align: center;
         }
 
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
         .contact-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 16px;
-            padding: 60px 40px;
-            max-width: 500px;
-            margin: 0 auto;
+            padding: 40px 30px;
             transition: all 0.3s ease;
+            text-align: center;
         }
 
         .contact-card:hover {
             background: rgba(255, 255, 255, 0.05);
             border-color: rgba(34, 197, 94, 0.3);
+            transform: translateY(-5px);
         }
 
         .contact-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
             color: #22c55e;
         }
 
         .contact-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: #ffffff;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .contact-link {
@@ -608,10 +616,17 @@
         <p class="section-subtitle">
             Always eager to learn and collaborate on exciting projects
         </p>
-        <div class="contact-card">
-            <div class="contact-icon">✉️</div>
-            <h3>Email</h3>
-            <a href="mailto:y.abilash13@gmail.com" class="contact-link">y.abilash13@gmail.com</a>
+        <div class="contact-info">
+            <div class="contact-card">
+                <div class="contact-icon">✉️</div>
+                <h3>Email</h3>
+                <a href="mailto:y.abilash13@gmail.com" class="contact-link">y.abilash13@gmail.com</a>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">🔗</div>
+                <h3>GitHub</h3>
+                <a href="https://github.com/Abilas13" target="_blank" class="contact-link">github.com/Abilas13</a>
+            </div>
         </div>
     </section>
 
